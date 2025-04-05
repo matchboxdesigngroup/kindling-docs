@@ -1,0 +1,37 @@
+{
+	"name": "matchbox/matchbox-wp",
+	"description": "The starting point for all Matchbox WordPress projects.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Matchbox"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+			]
+		}
+	],
+	"require": {
+		"php": ">=8.2"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require-dev": {
+		"wpackagist-plugin/debug-bar": "*",
+		"wpackagist-plugin/query-monitor": "*",
+		"wpackagist-plugin/debug-bar-slow-actions": "*"
+	},
+	"extra": {
+		"installer-paths": {
+			"plugins/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	}
+}

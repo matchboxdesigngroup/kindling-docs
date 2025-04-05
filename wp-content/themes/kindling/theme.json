@@ -1,0 +1,185 @@
+{
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#F76B48",
+					"name": "Brand 01",
+					"slug": "brand-01"
+				},
+				{
+					"color": "#F3F4F0",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#0E2324",
+					"name": "Contrast",
+					"slug": "contrast"
+				}
+			]
+		},
+		"custom": {
+			"color": {
+				"pairing": {
+					"accent": "var(--wp--preset--color--brand-01)",
+					"base": "var(--wp--preset--color--base)",
+					"border": "var(--wp--preset--color--contrast)",
+					"contrast": "var(--wp--preset--color--contrast)",
+					"surface": "#f5f5f5"
+				}
+			},
+			"layout": {
+				"full-viewport-width": "calc(100vw - var(--wp--custom--layout--scrollbar-width, 0px))",
+				"main-content-width-side-spacing": "calc((var(--wp--custom--layout--full-viewport-width) - var(--wp--style--global--content-size)) / 2)",
+				"main-wide-width-side-spacing": "calc((var(--wp--custom--layout--full-viewport-width) - var(--wp--style--global--wide-size)) / 2)",
+				"scrollbar-width": "0px",
+				"site-content-width": "calc(var(--wp--custom--layout--full-viewport-width) - (2 * var(--wp--custom--layout--site-outer-padding)))",
+				"site-outer-padding": "max(var(--wp--preset--spacing--16, 1rem), env(safe-area-inset-left))"
+			}
+		},
+		"layout": {
+			"allowCustomContentAndWideSize": false,
+			"contentSize": "min(650px, var(--wp--custom--layout--site-content-width))",
+			"wideSize": "min(1200px, var(--wp--custom--layout--site-content-width))"
+		},
+		"spacing": {
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"dropCap": false,
+			"fluid": {
+				"maxViewportWidth": "1450px",
+				"minViewportWidth": "390px"
+			},
+			"fontFamilies": [
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Be Vietnam Pro\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-400-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Be Vietnam Pro\"",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-300-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Be Vietnam Pro\"",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-600-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Be Vietnam Pro\", sans-serif",
+					"name": "Be Vietnam Pro",
+					"slug": "be-vietnam-pro"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": {
+						"max": "0.875rem",
+						"min": "0.75rem"
+					},
+					"name": "Small",
+					"size": "0.75rem",
+					"slug": "small"
+				},
+				{
+					"fluid": {
+						"max": "1.125rem",
+						"min": "1rem"
+					},
+					"name": "Medium",
+					"size": "1rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"max": "1.5rem",
+						"min": "1.25rem"
+					},
+					"name": "Large",
+					"size": "1.25rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"max": "2.5rem",
+						"min": "2rem"
+					},
+					"name": "Extra Large",
+					"size": "2rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"max": "3.75rem",
+						"min": "2.5rem"
+					},
+					"name": "Extra Extra Large",
+					"size": "2.5rem",
+					"slug": "xx-large"
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--custom--color--pairing--contrast)"
+		},
+		"css": ".matchbox-site-wrapper {\n  grid-template-columns: 300px minmax(0,1fr) !important;\n}",
+		"spacing": {
+			"padding": {
+				"bottom": "0",
+				"left": "var(--wp--custom--layout--site-outer-padding)",
+				"right": "var(--wp--custom--layout--site-outer-padding)",
+				"top": "0"
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--be-vietnam-pro)",
+			"lineHeight": "1.75"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+}

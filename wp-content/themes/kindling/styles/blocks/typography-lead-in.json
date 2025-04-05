@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Lead-in",
+	"slug": "typography-lead-in",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"color": {
+			"text": "oklch(from currentColor 40% c h)"
+		},
+		"typography": {
+			"fontSize": "1.25rem",
+			"lineHeight": "1.5"
+		}
+	}
+}

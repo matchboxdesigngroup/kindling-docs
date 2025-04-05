@@ -1,0 +1,20 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Kicker",
+	"slug": "typography-kicker",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"color": {
+			"text": "oklch(from currentColor 60% c h)"
+		},
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--small)",
+			"fontWeight": "600",
+			"lineHeight": "1.2",
+			"textTransform": "uppercase"
+		}
+	}
+}

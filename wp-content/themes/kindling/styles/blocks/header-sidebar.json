@@ -1,0 +1,27 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Header - Sidebar",
+	"slug": "header-sidebar",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "600",
+					"lineHeight": "1"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -130,3 +130,20 @@ img {
 @view-transition {
 	navigation: auto;
 }
+
+/*
+ * Add inline styling for code and kbd markup.
+ */
+
+:where(:not(pre) > code),
+kbd {
+	background: rgb(from var(--wp--preset--color--brand-01) r g b / 10%);
+	border-radius: 2px;
+	display: inline-block;
+	font-family: var(--wp--preset--font-family--monospace);
+    font-size: calc(100% - 2px);
+	max-width: 100%;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+ 

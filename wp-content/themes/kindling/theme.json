@@ -100,6 +100,21 @@
 					"fontFamily": "\"Be Vietnam Pro\", sans-serif",
 					"name": "Be Vietnam Pro",
 					"slug": "be-vietnam-pro"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Fira Code\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/fira-code/fira-code-400-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Fira Code\", monospace",
+					"name": "Fira Code",
+					"slug": "monospace"
 				}
 			],
 			"fontSizes": [

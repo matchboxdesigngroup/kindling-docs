@@ -30,6 +30,8 @@
 					"base": "var(--wp--preset--color--base)",
 					"border": "var(--wp--preset--color--contrast)",
 					"contrast": "var(--wp--preset--color--contrast)",
+					"lighter-40": "oklch(from currentColor 40% c h)",
+					"lighter-60": "oklch(from currentColor 60% c h)",
 					"surface": "#f5f5f5"
 				}
 			},
@@ -168,6 +170,37 @@
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"blocks": {
+			"x3p0/breadcrumbs": {
+				"color": {
+					"text": "var(--wp--custom--color--pairing--lighter-60)"
+				},
+				"elements": {
+					"link": {
+						":hover": {
+							"color": {
+								"text": "var(--wp--custom--color--pairing--lighter-40)"
+							}
+						},
+						"color": {
+							"text": "var(--wp--custom--color--pairing--lighter-60)"
+						},
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--small)",
+							"fontWeight": "400",
+							"lineHeight": "1.2",
+							"textDecoration": "none"
+						}
+					}
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--50)",
+						"top": "var(--wp--preset--spacing--50)"
+					}
+				}
+			}
+		},
 		"color": {
 			"text": "var(--wp--custom--color--pairing--contrast)"
 		},

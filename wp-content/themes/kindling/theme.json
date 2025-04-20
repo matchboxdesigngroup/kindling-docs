@@ -12,6 +12,11 @@
 					"slug": "brand-01"
 				},
 				{
+					"color": "#336BB7",
+					"name": "Brand 02",
+					"slug": "brand-02"
+				},
+				{
 					"color": "#F3F4F0",
 					"name": "Base",
 					"slug": "base"
@@ -205,6 +210,22 @@
 			"text": "var(--wp--custom--color--pairing--contrast)"
 		},
 		"css": ".matchbox-site-wrapper {\n  grid-template-columns: 300px minmax(0,1fr) !important;\n}",
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--brand-02)"
+				},
+				"css": "text-underline-offset: 2px;",
+				"typography": {
+					"fontWeight": "500"
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				}
+			}
+		},
 		"spacing": {
 			"padding": {
 				"bottom": "0",

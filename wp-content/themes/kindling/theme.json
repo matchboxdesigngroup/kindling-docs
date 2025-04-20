@@ -12,6 +12,11 @@
 					"slug": "brand-01"
 				},
 				{
+					"color": "#336BB7",
+					"name": "Brand 02",
+					"slug": "brand-02"
+				},
+				{
 					"color": "#F3F4F0",
 					"name": "Base",
 					"slug": "base"
@@ -30,6 +35,8 @@
 					"base": "var(--wp--preset--color--base)",
 					"border": "var(--wp--preset--color--contrast)",
 					"contrast": "var(--wp--preset--color--contrast)",
+					"lighter-40": "oklch(from currentColor 40% c h)",
+					"lighter-60": "oklch(from currentColor 60% c h)",
 					"surface": "#f5f5f5"
 				}
 			},
@@ -44,7 +51,7 @@
 		},
 		"layout": {
 			"allowCustomContentAndWideSize": false,
-			"contentSize": "min(650px, var(--wp--custom--layout--site-content-width))",
+			"contentSize": "min(680px, var(--wp--custom--layout--site-content-width))",
 			"wideSize": "min(1200px, var(--wp--custom--layout--site-content-width))"
 		},
 		"spacing": {
@@ -100,6 +107,21 @@
 					"fontFamily": "\"Be Vietnam Pro\", sans-serif",
 					"name": "Be Vietnam Pro",
 					"slug": "be-vietnam-pro"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Fira Code\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/fira-code/fira-code-400-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Fira Code\", monospace",
+					"name": "Fira Code",
+					"slug": "monospace"
 				}
 			],
 			"fontSizes": [
@@ -153,10 +175,57 @@
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"blocks": {
+			"x3p0/breadcrumbs": {
+				"color": {
+					"text": "var(--wp--custom--color--pairing--lighter-60)"
+				},
+				"elements": {
+					"link": {
+						":hover": {
+							"color": {
+								"text": "var(--wp--custom--color--pairing--lighter-40)"
+							}
+						},
+						"color": {
+							"text": "var(--wp--custom--color--pairing--lighter-60)"
+						},
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--small)",
+							"fontWeight": "400",
+							"lineHeight": "1.2",
+							"textDecoration": "none"
+						}
+					}
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--50)",
+						"top": "var(--wp--preset--spacing--50)"
+					}
+				}
+			}
+		},
 		"color": {
 			"text": "var(--wp--custom--color--pairing--contrast)"
 		},
 		"css": ".matchbox-site-wrapper {\n  grid-template-columns: 300px minmax(0,1fr) !important;\n}",
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--brand-02)"
+				},
+				"css": "text-underline-offset: 2px;",
+				"typography": {
+					"fontWeight": "500"
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				}
+			}
+		},
 		"spacing": {
 			"padding": {
 				"bottom": "0",
@@ -167,6 +236,8 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--be-vietnam-pro)",
+			"fontStyle": "normal",
+			"fontWeight": "300",
 			"lineHeight": "1.75"
 		}
 	},
@@ -181,5 +252,5 @@
 		}
 	],
 	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }

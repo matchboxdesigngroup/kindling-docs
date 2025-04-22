@@ -1,0 +1,18 @@
+/*
+ * Block styles for the core/navigation block.
+ */
+
+.wp-block-navigation {
+	li.current-menu-item > a {
+		color: var(--wp--custom--color--pairing--base) !important;
+	}
+
+	.wp-block-page-list {
+		li.current-menu-item > a {
+			border-left: 1px solid var(--wp--custom--color--pairing--base);
+			color: var(--wp--custom--color--pairing--base) !important;
+			font-weight: bold;
+			margin-left: -1px;
+		}
+	}
+}

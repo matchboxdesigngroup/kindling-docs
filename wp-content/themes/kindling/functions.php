@@ -37,7 +37,7 @@ if ( ! function_exists( 'kindling_enqueue_block_styles' ) ) {
 	function kindling_enqueue_block_styles() {
 		// Add the block name (with namespace) for each style.
 		$blocks = array(
-			'core/navigation'
+			'core/navigation',
 		);
 
 		// Loop through each block and enqueue its styles.
@@ -45,11 +45,14 @@ if ( ! function_exists( 'kindling_enqueue_block_styles' ) ) {
 			// Replace slash with hyphen for filename.
 			$slug = str_replace( '/', '-', $block );
 
-			wp_enqueue_block_style( $block, array(
-				'handle' => "kindling-block-{$slug}",
-				'src'    => get_theme_file_uri( "assets/blocks/{$slug}.css" ),
-				'path'   => get_theme_file_path( "assets/blocks/{$slug}.css" )
-			) );
+			wp_enqueue_block_style(
+				$block,
+				array(
+					'handle' => "kindling-block-{$slug}",
+					'src'    => get_theme_file_uri( "assets/blocks/{$slug}.css" ),
+					'path'   => get_theme_file_path( "assets/blocks/{$slug}.css" ),
+				)
+			);
 		}
 	}
 }

@@ -4,13 +4,13 @@
 
 .wp-block-navigation {
 	li.current-menu-item > a {
-		color: var(--wp--custom--color--pairing--base) !important;
+		color: var(--wp--custom--color--pairing--contrast) !important;
 	}
 
 	.wp-block-page-list {
 		li.current-menu-item > a {
-			border-left: 1px solid var(--wp--custom--color--pairing--base);
-			color: var(--wp--custom--color--pairing--base) !important;
+			border-left: 1px solid var(--wp--custom--color--pairing--contrast);
+			color: var(--wp--custom--color--pairing--contrast) !important;
 			font-weight: bold;
 			margin-left: -1px;
 		}

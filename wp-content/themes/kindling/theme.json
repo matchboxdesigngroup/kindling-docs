@@ -47,14 +47,61 @@
 				"scrollbar-width": "0px",
 				"site-content-width": "calc(var(--wp--custom--layout--full-viewport-width) - (2 * var(--wp--custom--layout--site-outer-padding)))",
 				"site-outer-padding": "max(var(--wp--preset--spacing--16, 1rem), env(safe-area-inset-left))"
+			},
+			"spacing": {
+				"2": "0.125rem",
+				"4": "0.25rem",
+				"8": "0.5rem",
+				"12": "0.75rem",
+				"16": "1rem",
+				"20": "1.25rem",
+				"24": "1.5rem"
 			}
 		},
 		"layout": {
 			"allowCustomContentAndWideSize": false,
-			"contentSize": "min(680px, var(--wp--custom--layout--site-content-width))",
+			"contentSize": "min(720px, var(--wp--custom--layout--site-content-width))",
 			"wideSize": "min(1200px, var(--wp--custom--layout--site-content-width))"
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "16px",
+					"size": "1rem",
+					"slug": "20"
+				},
+				{
+					"name": "24px",
+					"size": "1.5rem",
+					"slug": "30"
+				},
+				{
+					"name": "32px",
+					"size": "clamp(1.5rem, 5vw, 2rem)",
+					"slug": "40"
+				},
+				{
+					"name": "40px",
+					"size": "clamp(1.875rem, 1.875rem + ((1vw - 0.48rem) * 2.885), 2.5rem)",
+					"slug": "50"
+				},
+				{
+					"name": "56px",
+					"size": "clamp(2rem, 2rem + ((1vw - 0.48rem) * 2.885), 3.5rem)",
+					"slug": "60"
+				},
+				{
+					"name": "72px",
+					"size": "clamp(2.5rem, 2rem + ((1vw - 0.48rem) * 5), 4.5rem)",
+					"slug": "70"
+				},
+				{
+					"name": "120px",
+					"size": "clamp(2.5rem, 2.75rem + ((1vw - 0.48rem) * 9.096), 7.5rem)",
+					"slug": "80"
+				}
+			],
 			"units": [
 				"%",
 				"px",
@@ -82,17 +129,17 @@
 						{
 							"fontFamily": "\"Be Vietnam Pro\"",
 							"fontStyle": "normal",
-							"fontWeight": "400",
+							"fontWeight": "300",
 							"src": [
-								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-400-normal.woff2"
+								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-300-normal.woff2"
 							]
 						},
 						{
 							"fontFamily": "\"Be Vietnam Pro\"",
 							"fontStyle": "normal",
-							"fontWeight": "300",
+							"fontWeight": "400",
 							"src": [
-								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-300-normal.woff2"
+								"file:./assets/fonts/be-vietnam-pro/be-vietnam-pro-400-normal.woff2"
 							]
 						},
 						{
@@ -220,17 +267,17 @@
 		"css": ".matchbox-site-wrapper {\n  grid-template-columns: 300px minmax(0,1fr) !important;\n}",
 		"elements": {
 			"link": {
+				":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
 				"color": {
 					"text": "var(--wp--preset--color--brand-02)"
 				},
 				"css": "text-underline-offset: 2px;",
 				"typography": {
 					"fontWeight": "500"
-				},
-				":hover": {
-					"typography": {
-						"textDecoration": "none"
-					}
 				}
 			}
 		},

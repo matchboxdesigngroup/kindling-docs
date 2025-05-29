@@ -18,7 +18,7 @@
 					"link": {
 						":hover": {
 							"color": {
-								"text": "var(--wp--custom--color--pairing--base) !important"
+								"text": "var(--wp--custom--color--pairing--contrast) !important"
 							}
 						}
 					}
@@ -70,7 +70,7 @@
 								}
 							},
 							"color": {
-								"text": "var(--wp--custom--color--pairing--base) !important"
+								"text": "var(--wp--custom--color--pairing--contrast) !important"
 							},
 							"spacing": {
 								"margin": {

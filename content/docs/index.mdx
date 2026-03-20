@@ -1,13 +1,54 @@
 ---
-title: Hello World
-description: Your first document
+title: Home
+description: The Kindling Design System — tools and best practices Matchbox uses to build client websites.
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+import { Github } from 'lucide-react';
 
-## What is Next?
+<div className="text-lg text-fd-muted-foreground">
+	The Kindling Design System encompasses the tools and best practices{' '}
+	<a href="https://matchboxdesigngroup.com" target="_blank" rel="noopener noreferrer">
+		Matchbox
+	</a>{' '}
+	uses to build client websites.
+</div>
+
+---
+
+## Key Resources
 
 <Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
+	<Card
+		href="https://github.com/matchboxdesigngroup/matchbox-wp"
+		title="/matchbox-wp"
+		icon={<Github />}
+	>
+		The Matchbox git template for WordPress projects.
+	</Card>
+	<Card
+		href="https://github.com/matchboxdesigngroup/matchbox-blocks"
+		title="/matchbox-blocks"
+		icon={<Github />}
+	>
+		A collection of custom WordPress blocks and extensions.
+	</Card>
+	<Card
+		href="https://github.com/matchboxdesigngroup/matchbox-support"
+		title="/matchbox-support"
+		icon={<Github />}
+	>
+		A WordPress plugin that improves the Matchbox customer experience.
+	</Card>
 </Cards>
+
+## Project goals
+
+- Create a project framework that reduces the time needed to build standard website features.
+- Create a design system with documentation that guides the team in decision making.
+- Create a Figma framework that simplifies the creation and handoff of design.
+- Develop a set of standard site features that can launch with all new sites.
+- Develop a framework for build custom site features that fall outside of a base build.
+- Use a more agile approach to site builds, allowing content, design and development to work in parallel.
+- Create a WordPress pattern library that houses a collection of patterns our team can use to rapidly prototype and build new sites.
+- Create WordPress plugin that houses custom functionality our team uses in all sites.
+- Create a test library for testing theme and plugin changes.

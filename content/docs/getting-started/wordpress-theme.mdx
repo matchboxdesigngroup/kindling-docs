@@ -1,0 +1,24 @@
+---
+title: WordPress Theme
+description: Kindling as the WordPress starter theme, core principles, and custom features like view transitions.
+---
+
+<div className="text-lg text-fd-muted-foreground">{`Kindling is the starter theme for WordPress and is maintained in the `}<a href="https://github.com/matchboxdesigngroup/matchbox-wp" target="_blank" rel="noopener noreferrer">matchbox-wp repo</a>.</div>
+
+---
+
+## Core principles
+
+- If it can be done in theme.json, it should.
+- Typography and spacing should use t-shirt sizing for names and slugs.
+- Colors should use the matchbox naming convention for slugs, but names can be customized.
+- Core patterns should use the `custom` settings instead of applying block settings within the pattern.
+- Use block style variations to change the appearance of a block or section.
+- Only set block specific styles when you need to override a pattern or style variation.
+- All non-synced patterns should be committed to the project repo before site launch.
+
+## Custom features
+
+### View transitions
+
+<p>{`The theme enables the default `}<a href="https://developer.chrome.com/docs/web-platform/view-transitions#cross-document_view_transitions" target="_blank" rel="noopener noreferrer">view transition</a>{` for cross-document navigation. This means users with a supported browser will see a slight fade transition when navigating between pages within the site. This feature, combined with `}<a href="https://make.wordpress.org/core/2025/03/06/speculative-loading-in-6-8/" target="_blank" rel="noopener noreferrer">speculative loading</a>{`, yields near-instant page load times.`}</p>

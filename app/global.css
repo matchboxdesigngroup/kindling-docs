@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/* Kindling: dark mode shell uses brand base #0e2324 instead of neutral black */
+.dark {
+	--color-fd-background: #0e2324;
+	--color-fd-muted: #12292b;
+	--color-fd-popover: #152d2f;
+	--color-fd-card: #152d2f;
+	--color-fd-secondary: #1a3538;
+}

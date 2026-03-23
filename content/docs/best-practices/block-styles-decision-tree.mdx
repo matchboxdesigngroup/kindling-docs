@@ -1,0 +1,62 @@
+---
+title: Block Styles Decision Tree
+description: When to reuse a block style, create a new one, or override at the pattern level.
+---
+
+**Decision Tree: When to Create a New Block Style**
+
+Use this guide to decide whether to apply an existing block style, create a new one, or override styling at the pattern level.
+
+---
+
+### Check for an Existing Block Style
+
+**Example:**  
+You’re building a pattern and need styling similar to an existing block style like **Kicker**.
+
+- **If the existing block style matches your needs exactly:**  
+  → **Use the block style as is.**  
+  No changes needed.
+
+---
+
+### Check for Minor Differences
+
+- **If there are small differences (e.g., typography matches but spacing is slightly different):**
+
+  - **Ask the design team:** Is this difference intentional?
+
+    - **If NOT intentional:**
+
+      - Align with the existing block style.
+      - Adjust the pattern to match the documented block style.
+
+    - **If INTENTIONAL:**  
+      Proceed to step 3.
+
+---
+
+### Determine Scope of the Difference
+
+**Q:** Is the intentional difference unique to this pattern, or does it apply to multiple patterns?
+
+- **If the difference will be reused in multiple places:**  
+  → **Create a new block style** with the adjusted settings (e.g., correct block spacing).
+
+- **If the difference is unique to this one pattern:**  
+  → **Do NOT create a new block style.**  
+  Instead, **override the styling** directly in:
+
+  - the block’s settings panel, or
+  - within the pattern’s custom styles.
+
+---
+
+### Summary
+
+| Scenario | Action |
+| --- | --- |
+| Styling is exactly the same | Use the existing block style |
+| Minor difference, not intentional | Align with the existing block style |
+| Minor difference, intentional & reused | Create a new block style |
+| Minor difference, intentional but unique | Override in the block or pattern only |

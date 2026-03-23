@@ -1,0 +1,10 @@
+{
+	"pages": [
+		"index",
+		"getting-started",
+		"foundations",
+		"best-practices",
+		"components",
+		"pattern-library"
+	]
+}

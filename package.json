@@ -1,32 +1,33 @@
 {
-	"name": "matchbox-wp",
-	"version": "1.0.0",
-	"description": "Project Description",
-	"homepage": "https://project-domain.tld",
-	"repository": {
-		"type": "git",
-		"url": "https://project-git-repo.tld"
-	},
-	"workspaces": [
-		"themes/*",
-		"mu-plugins/matchbox-plugin"
-	],
+	"name": "kindling-docs",
+	"version": "0.0.0",
+	"private": true,
 	"scripts": {
-		"build": "npm run build --workspaces --if-present",
-		"start": "npm run watch",
-		"watch:theme": "npm run watch -w=matchbox-theme",
-		"watch:plugin": "npm run watch -w=matchbox-plugin",
-		"watch": "run-p watch:theme watch:plugin"
+		"build": "next build",
+		"dev": "next dev",
+		"start": "next start",
+		"types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
+		"postinstall": "fumadocs-mdx"
 	},
-	"author": {
-		"name": "Matchbox",
-		"url": "https://matchboxdesigngroup.com",
-		"role": "developer"
+	"dependencies": {
+		"fumadocs-core": "16.6.17",
+		"fumadocs-mdx": "14.2.10",
+		"fumadocs-ui": "16.6.17",
+		"lucide-react": "^0.577.0",
+		"next": "16.1.6",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"tailwind-merge": "^3.5.0",
+		"@takumi-rs/image-response": "^0.72.0"
 	},
-	"engineStrict": true,
-	"engines": {
-		"node": ">=20.0.0",
-		"npm": ">=9.0.0"
-	},
-	"devDependencies": {}
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.2.1",
+		"@types/mdx": "^2.0.13",
+		"@types/node": "^25.5.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"postcss": "^8.5.8",
+		"tailwindcss": "^4.2.1",
+		"typescript": "^5.9.3"
+	}
 }

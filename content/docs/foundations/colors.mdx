@@ -1,0 +1,47 @@
+---
+title: Colors
+description: The Kindling color palette, pairings, naming conventions, and related resources.
+---
+
+<div className="text-lg text-fd-muted-foreground">{`The color palette for Kindling is purpose-built to give a foundation of colors that blend cohesively.`}</div>
+
+---
+
+## Color palette
+
+In WordPress, the palette appears in the editor styles or on the styles panel of a block. While these can be overrides, we use color pairings when assigning color to our custom blocks and patterns.
+
+The palette is defined in the `settings.color.palette` property of the `theme.json` file and contains the brand and neutral colors.
+
+### Brand Colors
+
+The brand palette typically consists of colors used for accent elements and brand-related CTAs like buttons and links.
+
+### Naming
+
+To add a color to the palette, we must define three properties:
+
+- `color` —
+- `name` —
+- `slug` —
+
+The color system will default to the slug’s value as the color name. We recommend changing the color name to a human-friendly name (e.g., sage, midnight, red).
+
+## Color pairings
+
+A color pairing is a curated set of complementary colors that ensures consistency and legibility. Unlike the color palette, pairings use semantic color names that define how a primitive color is used throughout the design system (e.g., accent, border, surface).
+
+A theme will typically have multiple color pairings. The default pairing is defined in the `settings.custom.pairing` property of the `theme.json`, while additional pairings are defined in the `/styles/sections/` directory.
+
+## Naming convention
+
+### Slugs
+
+- `base` — Used for the default background color.
+- `contrast` — Used for the default text color.
+- `brand-01` — Used for brand colors.
+- `neutral-01` — Used for neutral colors.
+
+## Additional resources
+
+- <a href="https://developer.chrome.com/blog/css-relative-color-syntax" target="_blank" rel="noopener noreferrer">CSS relative color syntax</a> — Create new colors based on another color’s channels and values.

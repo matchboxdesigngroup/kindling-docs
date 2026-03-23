@@ -1,0 +1,15 @@
+{
+	"title": "Foundations",
+	"pages": [
+		"accessibility",
+		"borders",
+		"colors",
+		"elevation",
+		"illustrations",
+		"layout-grid",
+		"responsive-breakpoints",
+		"spacing",
+		"special-symbols",
+		"typography"
+	]
+}

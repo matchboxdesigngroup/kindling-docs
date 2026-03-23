@@ -1,0 +1,69 @@
+---
+title: Kindling Blocks Version 2.0.2 Release Notes
+description: Release notes for Kindling Blocks v2.0.2 — update system, build pipeline, and new block functionality.
+---
+
+<div><a href="https://github.com/matchboxdesigngroup/kindling-blocks/releases/tag/v2.0.2" target="_blank" rel="noopener noreferrer">Kindling Blocks version 2.0.2</a>{` released on November 26, 2025. This release focuses on three main areas: the implementation of the update system, improvements to the build and asset pipeline, and new block functionality that gives editors more flexibility.`}</div>
+
+## A Smarter Plugin Update System
+
+We’ve added a full plugin update system powered by the `yahnis-elsts/plugin-update-checker` library. This allows the plugin to automatically check for updates every 12 hours using a dedicated REST endpoint at `/wp-json/kls/v1/update-check`.
+
+Updates are now license-aware. All sites will see update notifications when a new version is available, but only sites with a valid, active license can download and install the update. This keeps update visibility transparent while ensuring downloads are properly gated.
+
+To support this, update requests now automatically include useful metadata such as the current plugin version, license key, site URL, and plugin slug. This happens behind the scenes and requires no extra setup.
+
+We’ve also improved error handling around update checks. Common issues like 404 responses, SSL problems, or invalid responses are now handled gracefully instead of causing failures. For local and development environments, SSL verification is automatically relaxed to make development smoother.
+
+## New Metric Counter Block
+
+This release introduces a brand-new **Metric Counter** block designed for highlighting key numbers and stats.
+
+The block features a smooth count-up animation that triggers when the block becomes visible on screen. You can add prefixes or suffixes, control number formatting, and independently style both the counter value and its label. Typography, spacing, and visual styling are all customizable, making it easy to match existing designs.
+
+## Section Block Background Enhancements
+
+The `kindling/section` block now supports core-style background images and minimum height controls using block supports. This brings it closer to the behavior of the core Group block while preserving existing layouts and styles. The result is more flexibility without breaking current content.
+
+## Build and Asset Improvements
+
+A significant amount of work went into improving how assets are built and distributed.
+
+We’ve refactored asset handling so all runtime assets are now loaded from the `build/` directory instead of `src/`. This allows the plugin to be distributed without shipping source files, keeping installs cleaner and more secure.
+
+Extension discovery has also been updated to scan `build/block-extensions` rather than `src/block-extensions`, aligning extension loading with the new build output.
+
+Several static asset paths were updated as part of this refactor, including Splide CSS, disable-post-term-links CSS, and the core-columns custom class script. The linked-blocks PHP loader was also updated to load from the `build/` directory.
+
+To support this workflow, we added a new `copy-assets` npm script and included the `copyfiles` package as a development dependency. After the webpack build completes, static assets that aren’t processed by webpack are now automatically copied into the `build/` folder. This ensures everything needed at runtime is included without manual steps.
+
+## Summary
+
+This release lays important groundwork for future updates by improving licensing, update delivery, and asset handling, while also delivering meaningful editor improvements through new and enhanced blocks. The goal was to make updates more reliable, builds more predictable, and content creation more powerful. This release moves us forward on all three fronts.
+
+---
+
+## Changelog
+
+### Added
+
+- **Plugin update system**: Implemented automatic update detection using `yahnis-elsts/plugin-update-checker` v5.6 library.
+- **Update check endpoint**: Configured update checks to query `/wp-json/kls/v1/update-check` endpoint every 12 hours.
+- **License-gated updates**: Added license validation before allowing plugin updates to be downloaded. Only sites with valid, active licenses can download and install updates.
+- **Automatic metadata injection**: Update requests now automatically include current version, license key, site URL, and plugin slug.
+- **Copy assets script**: Added `copy-assets` npm script to copy static files that aren’t processed by webpack to the `build/` folder.
+- **Copyfiles dependency**: Added `copyfiles` package as dev dependency for copying static assets during build.
+- **Metric Counter block**: New block for displaying animated numeric metrics with customizable formatting, typography, and styling options. Features count-up animation when visible, prefix/suffix support, and independent styling controls for counter value and label.
+- **Section block background enhancements**: Added core-style background image support and minimum height controls to the `kindling/section` block via block supports, matching core Group behavior while preserving existing layouts.
+
+### Changed
+
+- **Update flow**: All sites can see update notifications, but downloads are blocked for sites without valid licenses.
+- **Error handling**: Improved handling of HTTP errors (404s, SSL issues, invalid responses) with graceful fallbacks.
+- **SSL verification**: Automatically relaxed in local/dev environments for easier development.
+- **Asset path refactoring**: Refactored `Assets.php` to reference `build/` folder instead of `src/` folder for all assets, enabling distribution without source code.
+- **Extension discovery**: Updated extension discovery to scan `build/block-extensions` instead of `src/block-extensions`.
+- **Splide CSS paths**: Updated Splide CSS file paths to use `build/blocks/slider/splide/` instead of `src/blocks/slider/splide/`.
+- **Static asset paths**: Updated paths for disable-post-term-links CSS and core-columns-custom-class JS to use `build/` folder.
+- **Linked blocks PHP**: Updated `Bootstrap.php` to load linked-blocks PHP file from `build/block-extensions/linked-blocks/` instead of `src/`.
+- **Build process**: Updated build script to automatically copy static assets (Splide CSS, disable-post-term-links CSS, core-columns JS, linked-blocks PHP) to `build/` folder after webpack build.

@@ -1,5 +1,44 @@
 ---
 title: Filter Usage
+description: PR checklist for WordPress filters—extensibility, naming, docblocks, and documentation.
 ---
 
-Content coming soon.
+### Filter Usage Checklist (for PRs)
+
+Use this checklist to ensure your code is extensible and follows best practices when introducing new features or logic.
+
+---
+
+### General Filter Considerations
+
+- [ ] **Is any logic or value hardcoded that might need to change in the future?** (e.g., default settings, file paths, URLs, booleans)
+- [ ] **Would a developer benefit from overriding this behavior without editing plugin code?**
+- [ ] **Is this function likely to be reused in a different context?** (e.g., in a theme, another plugin, or for localization)
+- [ ] **Is this part of public-facing output, REST API, or editor configuration?**
+- [ ] **Are we modifying default WordPress behavior that users might want to revert?**
+
+---
+
+### Filter Implementation Best Practices
+
+- [ ] **Did I use `apply_filters()` for values and `do_action()` for fire-and-forget events?**
+- [ ] **Is the filter name unique, descriptive, and prefixed?** Example: `matchbox_disable_author_archive`
+- [ ] **Did I provide a complete and clear docblock above the filter?** Include:
+
+  - Filter name
+  - Description
+  - Parameters
+  - Return type (for filters)
+
+---
+
+### Filter Documentation
+
+- [ ] **Have I documented the new filter in the codebase?**
+- [ ] **Have I mentioned it in any related Changelog entry?**
+
+---
+
+### Bonus (Nice to Have)
+
+- [ ] **Have I added an example `add_filter()` usage?**

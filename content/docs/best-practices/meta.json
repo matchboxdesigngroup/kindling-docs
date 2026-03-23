@@ -1,6 +1,7 @@
 {
-	"title": "Best practices",
+	"title": "Best Practices",
 	"pages": [
+		"index",
 		"block-style-variations",
 		"block-styles-decision-tree",
 		"filter-usage",

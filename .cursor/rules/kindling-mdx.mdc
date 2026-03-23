@@ -1,0 +1,19 @@
+---
+description: MDX inline links and JSX whitespace for Kindling docs
+globs: content/docs/**/*.mdx
+alwaysApply: false
+---
+
+# Kindling docs MDX (JSX + links)
+
+When mixing **Markdown** with **inline `<a>`** (or other inline JSX) in the same sentence:
+
+1. **Do not use** `{' '}`. Put spaces inside template literals instead: `` {` … text `} ``.
+
+2. **Avoid stray whitespace nodes** that break the paragraph in `prose`: do not put a newline or indentation **between** an opening tag (`<p>`, `<div>`) and the first child, or **between** `</a>` and the following text, unless that text is in the same template literal. Prefer **one compact line** of JSX for a whole inline sentence, or template literals abutting `<a>` with no gaps: `` {`before `}<a href="…">label</a>{` after.`} ``
+
+3. **Do not split** an opening `<a` across lines from its `href` when the link is inline in a paragraph—use a single-line `<a href="…" …>label</a>`.
+
+4. For **lead-in blocks**, follow the same rules: `` <div className="…">{`… `}<a …>…</a>{`.`}</div> `` on minimal lines.
+
+This matches the patterns used in `wordpress-theme.mdx` (View transitions) and `index.mdx` (Home intro).

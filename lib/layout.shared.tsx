@@ -1,6 +1,7 @@
+import { KindlingNavTitle } from '@/components/kindling-nav-title';
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
-// fill this with your actual GitHub info, for example:
+/** Repo used for doc-page “view on GitHub” blob URLs (see `app/docs/[[...slug]]/page.tsx`), not the nav icon. */
 export const gitConfig = {
 	user: 'fuma-nama',
 	repo: 'fumadocs',
@@ -10,8 +11,8 @@ export const gitConfig = {
 export function baseOptions(): BaseLayoutProps {
 	return {
 		nav: {
-			title: 'Kindling',
+			title: <KindlingNavTitle />,
 		},
-		githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
+		githubUrl: 'https://github.com/matchboxdesigngroup/kindling/',
 	};
 }
